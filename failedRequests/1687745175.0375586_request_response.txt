@@ -1,0 +1,34 @@
+Request:
+[
+    {
+        "role": "system",
+        "content": "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
+    },
+    {
+        "role": "user",
+        "content": "My mom had Hodgkin's. She took a fairly weak chemo for a few months, didn't lose her hair, usually grabbed a bite to eat while getting her infusions so that the loss of appetite afterward wouldn't make such a big impact. At the end of the course of treatment she was in very good shape. A _different_ cancer altogether was what eventually got her. Lung cancer, very aggressive, that metastasized into her brain. The Hodgkin's was not at all a factor. So, assuming that you're not a lifelong smoker like she was, I think your prognosis is probably going to be very good. *You've got this.*\nGawd. Heavy indeed. But Ill just join in the chorus of fellow Nerdfighters that we love you, support you, and are here for you. Through all your phases. And yes, you can be both!! Give yourself permission to be both. Thank you for your vulnerability and transparency. Powerful. DFTBA\nYou dont know me and I barely know you. But I want you to know that Im rooting for you. Get well soon and kick this cancer in the @ss!\nIt's not a movie recommendation, but I can offer my favorite joke - How does a dog thicken a sauce? A roux! I wish you every possible smile, Hank\nAfter over a decade of watching you, I think it'd be ridiculous to expect this to not be terrifying. I hope everything works out okay. I hope it's not too hard on you. Any insights into recovery and health that you're comfortable sharing would of course be appreciated for all of us who care from afar, but obviously no pressure. I'm glad you'll be focusing in healing. Good luck!!\ngood luck mate. Hope the process goes okay\nTry everything, hope something sticks! Sending love through the universe and hope you come through and have decades of great life!\nIm so sorry to hear this :( I just celebrated 1 and a half years of Hodgkins-free! I know how you feel, but I believe that you can get through this :)\nWhat you're going to make, sir, is yourself healthier by following what your doctors recommend and giving yourself the space and grace to do nothing when you need to.\nBeat this shit. You will do it!\nThinking all the best thoughts and sending them your way.\nYoure going to be okay.\nVlogbrothers has been a constant source of comfort and optimism through some pretty hard times over the last ten years. I hope you find the same level of comfort and optimism through all this.\n Watch some Bollywood movies! Lively, vivid, and full of wonder!  Some examples :- 1. Kabhi Khushi Kabhi Gham 2. Hum dil de chuke sanam 3. Hum aapke hai kaun 4. Om Shanti Om 5. Gadar - Ek Prem Katha 6. Suryavansham\nMy heart goes out to you\nLove you hank, thanks for everything youve done for all of us. Man if you havent played Breath of the Wild or Tears of the Kingdom (Zelda games), theyre huge, immersive, fun, have lots of puzzles, and nothing heavy outside the usual fantasy dark lord vibes. Hope this helps!\nI've been watching you guys since I was a pre-teen (25 now), but this is my first time ever commenting. Hank, we've obviously never met, but I am so grateful you've been such a major player in my online life. Thank you for your vulnerability with us here, and I hope it's somewhat comforting to know how many of us are wishing you only the best. Keep doing whatever feels right for you during this. <3\nHope it turns good for you, just had my diagnosis for Hodgkin's lymphoma last year, and I'm 53 days post stem cell transplant right now, and get my first post transplant scan at the end of the month. Some not fun times ahead, but you have a good friend a family circle, and that makes a difference.\nSomething funny, in case you need a laugh: One of my favorite memories is popping my phone open to show my then-girlfriend-now-wife a video from a few years ago and, at the moment you say - as you always do - \"Good morning, John. It's Friday\" - she blurts out, \"John, how did you get the YouTube guy to talk to you? Do you know him?!\"\nIt's weird, she probably doesn't even remember it. But, top 10 memory for me.\nVG Recommendations"
+    }
+]
+
+Response:
+{
+    "id": "chatcmpl-7VUy7ZWKifeKgwQXeEQsaRlm6G2cT",
+    "object": "chat.completion",
+    "created": 1687741567,
+    "model": "gpt-3.5-turbo-0301",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "{\n  \"Video Games\": [\n    {\n      \"name\": \"Breath of the Wild\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Tears of the Kingdom\",\n      \"count\": 1\n    }\n  ]\n}\n\nTV Show Recommendations\n{\n  \"TV Shows\": []\n}\n\nBook Recommendations\n{\n  \"Books\": []\n}\n\nYouTube Channel Recommendations\n{\n  \"YouTube Channels\": [\n    {\n      \"name\": \"Vlogbrothers\",\n      \"count\": 1\n    }\n  ]\n}\n\nMovie Recommendations\n{\n  \"Movies\": [\n    {\n      \"name\": \"Kabhi Khushi Kabhi Gham\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Hum dil de chuke sanam\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Hum aapke hai kaun\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Om Shanti Om\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Gadar - Ek Prem Katha\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Suryavansham\",\n      \"count\": 1\n    }\n  ]\n}"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1048,
+        "completion_tokens": 264,
+        "total_tokens": 1312
+    }
+}

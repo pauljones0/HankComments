@@ -1,0 +1,34 @@
+Request:
+[
+    {
+        "role": "system",
+        "content": "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
+    },
+    {
+        "role": "user",
+        "content": "Hank, a lot of us have been around for so long that we don't even see you as just a science guy. Honestly, I think your personality and the breadth of your interests already makes you more than just one thing even for newcomers to the channel(s). It's not parasocial, it's just that we know you as (a public version of) Hank Green which encompasses all of it. Would I start thinking of a relative, a friend, or a coworker as \"that cancer and anxiety guy\" if they got a diagnosis? No, because I know them. And you make it really easy to know (a version of) you. So no, you've never been just an (insert thing here) guy to anyone and that's not going to change. You're that Hank Green guy, I guess\nCompletely remove all sugar out of your diet. Literally look it up.\nYour biopsy order story really hit home for me. I was diagnosed with testicular cancer on a Friday afternoon. 30 minutes after that phone call, I had a surgery scheduled for that Monday. I had never seen the medical system move so fast. You are gonna kick cancer's ass Hank and we will see you when you feel up to doing something in the process.\nI know its not a film or a video game, but building small Lego builds can be really chill when youre really not up for anything much.\nI love your chipper and sometimes absurdist delivery, Hank, even in a video like this. I hope for a smooth recovery and send you all my love \nHank, you're the single greatest living public figure in my mind, no exaggeration. Been following you both since 2012. Best of luck to you and your family in these hard times. My mom just got through chemo herself and it's not fun or easy but you're a man very capable of doing so and I know you'll be good on the other side. Best wishes.\nI get a lot of joy in watching old Monster Factory videos (Fallout 4 specifically, but they're all quite funny) as well as Drawfee\nWe watched a lot of miniature cooking videos through my partners treatments. Enjoy as much food while you can.\nHank, your energy and drive is inspiring to me and how you're handling this news is incredibly admirable. You've got this. Don't forget to be awesome :)\nalready looking forward to your celebratory return\nUgh. I know what youre going through all too well. Much love dude and take things one thing at a time.\nSaiki K and asobi asobase are animes that are super funny and lighthearted that i will watch on repeat.\nHank Green , Sir, you taught me a lot in my downtime. I loved your Human Anatomy series from Crash Course. You can fight through it!!! Thank You!\ntry to get a therapist that has experience with medical trauma sooner rather than later! I've been in two (!) long term relationships with people who went through chemo (both in remission thankfully) and both of them have said they should have gotten a therapist that could talk abt this with earlier. friends and family are good but a professional with experience is the best! screens might be hard so audio books r good - psalm for the wild built is a super comforting opposite-of-dystopia book, robots and world building, that helps me imagine a better future!\nYou can post any madstuff you like and blame the chemo. I mean dont go too mad. w.\nOne of my best friends was diagnosed with Hodgkin's a few years ago, and went through chemo during the worst of the pandemic. She's now been in remission since summer 2020 (I and a few friends kept her company for her last chemo infusion over zoom). She's still living an amazing life  she's engaged, she's working an exciting job, it's all happening. We're all here for you Hank, we'll be by your side through everything. Also, for what it's worth, revisiting The House Bunny is a great choice for a movie that is fun and sweet and great.\nHighly recommend The Apartment(1960) 13% bummer but Jack Lemmon absolutely makes up for it! Looking forward to your full recovery Hank! You got this "
+    }
+]
+
+Response:
+{
+    "id": "chatcmpl-7VSDjXKoQZ0T7kLTPvWUr51Suui6j",
+    "object": "chat.completion",
+    "created": 1687731003,
+    "model": "gpt-3.5-turbo-0301",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "{\n  \"Video Games\": [],\n  \"TV Shows\": [\"Saiki K\", {\"name\": \"The House Bunny\", \"count\": 1}],\n  \"Books\": [{\"name\": \"Psalm for the Wild-Built\", \"count\": 1}],\n  \"YouTube Channels\": [{\"name\": \"Drawfee\", \"count\": 1}],\n  \"Movies\": [{\"name\": \"The Apartment\", \"count\": 1}, {\"name\": \"The House Bunny\", \"count\": 1}]\n}"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 992,
+        "completion_tokens": 103,
+        "total_tokens": 1095
+    }
+}

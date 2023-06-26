@@ -1,0 +1,156 @@
+Traceback (most recent call last):
+  File "HankComments\venv\Lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "HankComments\venv\Lib\site-packages\urllib3\connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "Python311\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "Python311\Lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "HankComments\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\urllib3\util\retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\urllib3\packages\six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "HankComments\venv\Lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "HankComments\venv\Lib\site-packages\urllib3\connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "Python311\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "Python311\Lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "HankComments\venv\Lib\site-packages\openai\api_requestor.py", line 596, in request_raw
+    result = _thread_context.session.request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\requests\adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "HankComments\main.py", line 5, in <module>
+    analyzer.run()
+  File "HankComments\CommentAnalyzer.py", line 206, in run
+    self.process_comments(comments)
+  File "HankComments\CommentAnalyzer.py", line 130, in process_comments
+    self.process_batch(comment_batch)
+  File "HankComments\CommentAnalyzer.py", line 140, in process_batch
+    response = self.generate_request(message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\tenacity\__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\tenacity\__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\tenacity\__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "HankComments\venv\Lib\site-packages\tenacity\__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "HankComments\CommentAnalyzer.py", line 190, in generate_request
+    return openai.ChatCompletion.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\openai\api_resources\chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ^^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\openai\api_requestor.py", line 288, in request
+    result = self.request_raw(
+             ^^^^^^^^^^^^^^^^^
+  File "HankComments\venv\Lib\site-packages\openai\api_requestor.py", line 609, in request_raw
+    raise error.APIConnectionError(
+openai.error.APIConnectionError: Error communicating with OpenAI: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+Process finished with exit code 1
+------------------------------------------------------------------------------------------------------------------------
+
+Since the above error occured in making a request, this failure would mean that the LAST log in the log files WAS completed successfully, but this one was not. I will retry from the next line in the comments list.
+
+LAST successful log:
+=================
+
+Request:
+[
+    {
+        "role": "system",
+        "content": "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
+    },
+    {
+        "role": "user",
+        "content": "dear Hank, I hope this doesn't seem Para-social (I'm paranoid by that stuff). You've been in my life for the longest time, I still remember when I got my first job at 16 I would binge watch the two of you in this vlog brothers channel. my favorite were your joke videos in under 4 minutes. I could not stop laughing. that was the same time you two were able to make widescreen videos. I remember when you two made it to a Youtube rewind video. I pointed and screamed \"It's the vlog brothers!\" and proceeded to to the v hand gesture. when sci show started, I was hooked and learned so much. that got me through so much of my school years. and even now your Youtube shorts still keep me entertained because of your behavior. your drive for knowledge and enthusiasm to just learn. Hank you have touched so many peoples lives more than you ever know. and I believe you will continue to inspire people to be creative, curious, strive for science, because you are going to beat this. nothing can stop you. we love you Hank. more that you know. and we are all rooting for you. movies: hmm well most movies now adays have emotions in them. but here's my 3 recommendation. 1. a marathon of all Leslie Nielson movies. all of them. the madness is always uplifting. 2. the Grand Budapest Hotel. the way its directed is almost musical. in a sort of formal humor. 3. Anything written by Simon Pegg. like Hot Fuzz, or Shaun of the Dead. they are a bit much with the violence but the humor is undeniable. I really hope you take some time for yourself and enjoy a little YOU time. you deserve it. after everything you've done for us, you deserve you. nothing but best wishes.\nLove you and I hope those vibes come through the airwaves. Married to the Mob, very funny and one of my all time favorite movies. I'm watching Murdoch Mysteries, a Canadian warm fuzzy detective series set from starting 1895ish and still being made, they are into about 1910 or so, we see funny historical references to people like Mark Twain, Edison, Tesla, or Frank Loyd Wright... It is pure spoof. I like British television, the warm and fuzzy stuff that ends up being on PBS, like Masterpiece Mysteries, so If you stream Midsomer Murders. Midsomer has lots of quirks, smart dialogue and is a long running (there's about 22 seasons) diversion.\nPraying for comfort, strength, and healing for you in this time.\nThis might seem really weird, but I recommend getting into a really mindless phone app. Like candy crush or something like that. It's a good brain distraction when things feel heavy. We all love you \nNever heard of your channel before but in very glad you are taking this situation well and you have people that can help you out. Thank goodness its not one of the more lethal cancers. Hopefully you get better soon.\nI've had swollen lymph nodes in my neck for a few months now. Should I get that checked out?\nIf youve never watched Its Always Sunny in Philadelphia you should consider it. Its gods most unserious show (and my favorite)\nwait wait wait... that rainbow heart in the back.. is it flipping me off o.o!? I never noticed before xD!! Also don't worry, there is never ANY way your identitity won't be silly fun science smart guy lol... and I cry over things that make nobody cry too lmao but my brain cannot think of any movies! I'll add some if I can!\nU got me thru middle school and now into my dream high school, I wish nothing but the best for you and your health  you got this!!\nIf you go bald, do a collab with Seth Everman.\nI have no idea who you are, this came across my reccomndations though. I've listened to your video and I'm sorry you received this news. God bless brother and I wish you the best.\nHello dear person, i hope you have a great day, Games recomendation: Runescape, World of Warcraft, amd if you never play MINECRAFT JUST DO IT <3 hope you get well and thanks for being such a happy guy or trying to be in this tough time of your live. YOU ARE AN EXAMPLE OF PERSON <3\nSending prayers!!!!"
+    }
+]
+
+Response:
+{
+    "id": "chatcmpl-7VF0iTXQJy3wZbZMlLHBazR2YzFN6",
+    "object": "chat.completion",
+    "created": 1687680224,
+    "model": "gpt-3.5-turbo-0301",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "{\n  \"Video Games\": [\n    {\n      \"name\": \"Runescape\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"World of Warcraft\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Minecraft\",\n      \"count\": 1\n    }\n  ],\n  \"TV Shows\": [\n    {\n      \"name\": \"Murdoch Mysteries\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Midsomer Murders\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Masterpiece Mysteries\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"It's Always Sunny in Philadelphia\",\n      \"count\": 1\n    }\n  ],\n  \"Books\": [\n    {\n      \"name\": \"Anything written by Simon Pegg\",\n      \"count\": 1\n    }\n  ],\n  \"YouTube Channels\": [\n    {\n      \"name\": \"Vlogbrothers\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"SciShow\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Seth Everman\",\n      \"count\": 1\n    }\n  ],\n  \"Movies\": [\n    {\n      \"name\": \"Marathon of all Leslie Nielsen movies\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"The Grand Budapest Hotel\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Hot Fuzz\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Shaun of the Dead\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Married to the Mob\",\n      \"count\": 1\n    }\n  ]\n}"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1022,
+        "completion_tokens": 378,
+        "total_tokens": 1400
+    }
+}
+
+=================

@@ -1,0 +1,34 @@
+Request:
+[
+    {
+        "role": "system",
+        "content": "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
+    },
+    {
+        "role": "user",
+        "content": "You will win this fight my brother <3 , i can see it in your bright eyes full of life and joy\nHis posting this may end up saving a few lives. With the views this will get, there's a decent chance a few people watching will go and notice their lymph nodes are a little swollen...\nPrincess Diaries is always a fun classic\nEveryone watching and listening is 100% behind you. You are an inspiration to all of us. My advise is to put in as much science videos into your process and treatment and share your experience, I think it will be therapeutic for you.\nI cant even .. Well, I hope all the best, please get better... please :D\ncomment number 45k+ so only machines will read this: somehow this video is still informative, buoyant and almost fascinating. Jeez Hank! good luck on this, not very fun, rollercoaster :(\nThe Marx Brothers in Horse Feathers.......oh my! *Fighting with You*\nDownloading the WOC app has been very helpful to me for a source of support, information and encouragement. Chemo sucks but is manageable, you will feel like crap but they can manage most side affects. Do what makes you happy when you are well. It's important to feel in control of something in your life, when everything seems out of control.\nYou got this Hank  \nHere are my movie recommendations: 1. The Gamera film series. Gamera vs Jiger, Gamera vs Barugon, etc. Its a series of 1960s Japanese monster movies guaranteed to make you laugh or say wtf haha. 2. Austenland. Odd modern comedy about a Jane Austen themed resort. Perfectly lighthearted for the literary nerd. 3. Mystery Science Theatre 3000, or Riff Trax. Both lighthearted riffing on silly movies and absolutely zero heavy content. 4. Monty Python! The Black Knight scene in The Holy Grail never fails to offer a giggle. All the best to you in these upcoming days. Remind yourself the anxiety is reasonable and modern medicine is remarkable these days. You got this! \nIt's nothing compared to your situation, but I've been having a hard time lately and one of the things that helped me were your books. Thank you. Movie recommendations: Groundhog Day Almost any Christmas movie Mamma Mia Men in Black Minions, Despicable Me\nEd, Edd, and Eddie?\nAzumanga Daioh!!!! Manga and anime are jewels!!\nI personally really love to watch Disneyland vlogs. Ordinary Adventures is my favorite Disney channel.\nLong lost fan here, the tides of time took me away from this channel. But at one time, you guys were a huge part of my life in my developmental years. I clicked on this immediately and watched the whole thing. And all I can say is, We Love You. Things will be rough but it'll be okay. Whatever comes, you can handle it. Good days, bad days, you've got this. Allow yourself to be human and feel what you need to feel. All my love \nYou are awesomee. We love you so so much. You got this!\nPlease take care of yourself first. All my best wishes. \nI recommend Invader Zim. It's an older cartoon but it's hilarious and stupid and it's downright impossible to feel things for these characters. Except maybe GIR. You will love GIR\nKick that cancer's ass!!\nI re-read the heck out of every Michael Crichton novel when I was going through Chemo, highly recommended!\nYou've surely seen the Adventure Time animated series but it's fun to watch again.\nill be honest- i saw your video title, stared at it for a few seconds, then immediately closed the youtube app and went to bed. you're very loved, hank. im glad that you will have so many great people caring for you during these difficult times."
+    }
+]
+
+Response:
+{
+    "id": "chatcmpl-7VNgJivltWMiETKf6pWdBg8MSEfHo",
+    "object": "chat.completion",
+    "created": 1687713555,
+    "model": "gpt-3.5-turbo-0301",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "{\n  \"Video Games\": [],\n  \"TV Shows\": [\"Princess Diaries\"],\n  \"Books\": [\"Michael Crichton novels\"],\n  \"YouTube Channels\": [\"Ordinary Adventures\"],\n  \"Movies\": [\n    {\"name\": \"The Gamera film series\", \"count\": 1},\n    {\"name\": \"Austenland\", \"count\": 1},\n    {\"name\": \"Mystery Science Theatre 3000\", \"count\": 1},\n    {\"name\": \"Riff Trax\", \"count\": 1},\n    {\"name\": \"Monty Python\", \"count\": 1},\n    {\"name\": \"Groundhog Day\", \"count\": 1},\n    {\"name\": \"Almost any Christmas movie\", \"count\": 1},\n    {\"name\": \"Mamma Mia\", \"count\": 1},\n    {\"name\": \"Men in Black\", \"count\": 1},\n    {\"name\": \"Minions\", \"count\": 1},\n    {\"name\": \"Despicable Me\", \"count\": 1},\n    {\"name\": \"Invader Zim\", \"count\": 1},\n    {\"name\": \"Adventure Time\", \"count\": 1}\n  ]\n}"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 922,
+        "completion_tokens": 250,
+        "total_tokens": 1172
+    }
+}

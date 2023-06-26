@@ -1,0 +1,34 @@
+Request:
+[
+    {
+        "role": "system",
+        "content": "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
+    },
+    {
+        "role": "user",
+        "content": "If you want some game recommendations Id say the mega man X series, 1-4 are really good action platformers and shouldnt be all to heavy on story stuff. Best of luck with your cancer.\nMy man try Factorio, great way to burn a month or two... or three... I've lost count actually. Long story short extremely good way to get distracted, especially if you try something like space exploration mod\nWas gonna recommend outer wilds cause it's a beautiful and super relaxing game... but it's also super emotional so if you don't want that then uh... maybe a good post treatment game. Instead I'm gonna recommend deep rock galactic cause that has no plot and is just dwarves in space and is super duper fun\nI recommend Open Season, Dude Wheres My Car. They are happy and funny movies that I like to watch just because :)\nZelda Tears of the Kingdom is new and a big happy distraction with nothing sad. Very funny often.\nYou got this Hank, we're here for you\nDivinity orginal sin 1 and 2 are a lot of fun, turn based RPG with modern flares, so many different build options, non emotional, and you can play split screen coop together! The new Zelda game just dropped and it's a massive beautiful world you can explore and get lost in as well. Sending my thoughts and prayers to you, your family and friends  you got this \nYou've got this Hank! May this hopefully just feel like another experiment once you've recovered!\nI couldnt figure out how to reply to your comment but animal crossing hew horizons is lots of fun and a good family game you can play as well as Kirby forgoten land also a fun family game or on your own game\nUve taught ppl so much from your videos , u can come out of this. U can do it\nSubscribed to the newsletter <3\nTo me you are fun groovy, cience guy! I learn so much from your video's. Not only about science but also about life. Thank you for all off that.\nI have just been diagnosed with myeloma; and your video is very helpful, a heartfelt reminder that no one is immune to the taint of suffering. I and my family are looking forward to a difficult time over the next few years, but it will also be a time to really grasp what I value in my life. I mean to seek out the people, places, things that remind me how good it is to be alive, if for no other reason than that it will not always be so.\nI enjoy things that have limited dialogue. Just for Laughs street gags and Mr. Bean are my favourites, or animation like Pingu or Larva that just focus on the antics of the little creatures. Best wishes in your coming days.\nHANK!! Between Two Ferns with Zach Galifianakis. The whole series can be found on YouTube. Quick, lighthearted. Recommend . Im rooting for you!!\nPlay Blur. Its a racing game\nfind a therapist NOW who does telehealth who has experience with grief processing \nWe love you so much Hank . You will always be the funny silly science guy making our hearts warm and maybe a little dissapointed that we can't eat grass :)\nWishing you all the best man and I hope you make a swift recovery\nShow: THE OFFICE!!:D alwayd has jokes Video game: Mario bros or animal crossing\nHave a good healing. Be the miracle!\nno man's sky is a really cool video game where you can wander a universe of many planets with your own starship and discover new plants, minerals, and animals. It's generated like minecraft so the worlds you land on are yours to discover, no one else has seen them before. i never really felt the vastness of space before playing no man's sky.\nBest stupid game west of Loathing. It's hilarious and simple. A little to the left is a puzzle game about cleaning. Melatonin is a rhythm game about dreams. I haven't played it but heard good things about no man's sky. You explore space and start a base on a planet you discover. Think animal crossing but space. Then there's a classic space chem."
+    }
+]
+
+Response:
+{
+    "id": "chatcmpl-7VNqNJeJNvxLg3GYznP3L04ATCs4m",
+    "object": "chat.completion",
+    "created": 1687714179,
+    "model": "gpt-3.5-turbo-0301",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "{\n  \"Video Games\": [\n    {\"name\": \"Mega Man X series\", \"count\": 1},\n    {\"name\": \"Factorio\", \"count\": 1},\n    {\"name\": \"Space Exploration mod\", \"count\": 1},\n    {\"name\": \"Deep Rock Galactic\", \"count\": 1},\n    {\"name\": \"Divinity Original Sin 1 and 2\", \"count\": 1},\n    {\"name\": \"The Legend of Zelda: Breath of the Wild\", \"count\": 1},\n    {\"name\": \"Blur\", \"count\": 1},\n    {\"name\": \"No Man's Sky\", \"count\": 2},\n    {\"name\": \"West of Loathing\", \"count\": 1},\n  ],\n  \"TV Shows\": [\n    {\"name\": \"The Office\", \"count\": 1},\n    {\"name\": \"Between Two Ferns with Zach Galifianakis\", \"count\": 1},\n  ],\n  \"Books\": [\n    {\"name\": \"Open Season\", \"count\": 1},\n    {\"name\": \"Dude, Where's My Car?\", \"count\": 1},\n    {\"name\": \"The Legend of Zelda: Tears of the Kingdom\", \"count\": 1},\n  ],\n  \"YouTube Channels\": [\n    {\"name\": \"Just for Laughs\", \"count\": 1},\n    {\"name\": \"Mr. Bean\", \"count\": 1},\n    {\"name\": \"Pingu\", \"count\": 1},\n    {\"name\": \"Larva\", \"count\": 1},\n  ],\n  \"Movies\": [\n    {\"name\": \"Open Season\", \"count\": 1},\n    {\"name\": \"Dude, Where's My Car?\", \"count\": 1},\n  ]\n}"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 976,
+        "completion_tokens": 371,
+        "total_tokens": 1347
+    }
+}

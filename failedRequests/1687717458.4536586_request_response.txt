@@ -1,0 +1,34 @@
+Request:
+[
+    {
+        "role": "system",
+        "content": "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
+    },
+    {
+        "role": "user",
+        "content": "My stepmom got cancer & didnt tell anyone except my dad & us kids. Your feelings about being seen as a cancer person are valid. People will treat you differently-they have good intentions & are also scared because they dont know how to help. I think having a public figure talk about this reality & the feelings that come with it is so helpful. At the end of the day, you are a science communicator & this is another scientific topic that has to be addressed & it matters to a lot of people. Even the way you just quickly described chemo-poison the hungry cells is easily understandable for anyone. Youve given us enough info over the years to last a lifetime. Now is the time for you to conserve energy. Science touches every single part of our lives. You taught us that. We will be here to hear this story when you are ready\nPraying and wishing for good news for you, followed you since I was a child. All the best hank.\nBest wishes for a speedy recovery Hank. You're a treasure to us all.\nA game that is very beautiful and peaceful is:SKY children of the light.\nWe love you dog!!!!\nIm praying for you man. Youve got this\nWere cheering for you, Hank!\nYou should totally play zelda breath of the wild and/or zelda tears of the kingdom, youd love it\nif you have a nentendo switch you need to play The Annoying Goose Game! cause havoc as a goose!\nAll the best to you, and to anyone else going through the same or similar who might need it right now \nIm so sorry :(\nYouve got this big man. Were all rooting for you\nHank we are with you, you are so so important for us and me. I only hope the big unpleasantness won't take long and you'll be back with full strength. And as a person with cancer patients in family, i can only say be kind to youself, and your family and friends as well.\n\nMuch love from PR, John \nSo glad you have strong friendships to pull you through this! I thankfully dont have experience with cancer but I am chronically ill and disabled person and that grief you have of a diagnosis thrust on you is so normal. So yeah, just be kind on yourself, processing that change is always challenging. My ideas for comfort media as a similarly emotional chronic fatigue human! Basically anything from Studio Ghibli, Kikis delivery service is my favourite and very reassuring for over achieving brains when you need to rest! Also, the Shrek movies, classic, basically anything that bought you comfort as a child will be great cause its garunteed restful and you know the plot already so you wont feel bad if you fall asleep during it lol. Also, for games, if you don't have one already get a nintendo switch!! Super great for playing lying down while in bed! Cozy restful games include: Bear & Breakfast, stardew valley, minecraft, animal crossing, Ooblets, and Cat Cafe\nIdea for videos! Vlog your chemo experience! So if anyone else gets this, they know what to expect! It might help keep your attitude up as well cause then youre helping other people know what to expect, but i think youll pull through man, youre freaking hank green, bill nye: part 2, making science fun and entertaining\nMedia to consume: - Animal Crossing (if you havent already): super chill, make an island, make friends, respects your time, gives you something to look forward to tomorrow. Also, check out some solo-board games. Having something physical you can touch and play with can be pretty healing when you find youraelf feeling exhausted from digital media. There are a slew of good simple games. Anything from Button Shy is a good choice (they make 18 card games thay fit in a wallet). Voyages by Postmark Games has you sailing around and all of their games are just a single printed piece of paper you can get for a couple of bucks.\nBattle block theater is a great game but a lil hard its a 360 game but its backwards compatible its a good game to play with some one\nHank, we love you. We're here for you."
+    }
+]
+
+Response:
+{
+    "id": "chatcmpl-7VNl7GuNZkRsh2JaLQkuJzDy6dh7L",
+    "object": "chat.completion",
+    "created": 1687713853,
+    "model": "gpt-3.5-turbo-0301",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "{\n  \"Video Games\": [\n    {\n      \"name\": \"SKY children of the light\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Zelda Breath of the Wild\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Zelda Tears of the Kingdom\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"The Annoying Goose Game\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Bear & Breakfast\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Stardew Valley\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Minecraft\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Animal Crossing\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Battle Block Theater\",\n      \"count\": 1\n    }\n  ],\n  \"TV Shows\": [],\n  \"Books\": [],\n  \"YouTube Channels\": [],\n  \"Movies\": [],\n}"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 978,
+        "completion_tokens": 223,
+        "total_tokens": 1201
+    }
+}

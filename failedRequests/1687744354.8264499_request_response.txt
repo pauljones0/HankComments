@@ -1,0 +1,34 @@
+Request:
+[
+    {
+        "role": "system",
+        "content": "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
+    },
+    {
+        "role": "user",
+        "content": "Recommendation for a media thing: Off Menu! Especially the episodes with Greg Davies and Tim Key \nPlease get well. Please.\nLife is so unfair... Wish you the best, you WILL get through it! Much love from Czechia <3\nParks and Recreation is so much good vibes and very minimal heavy feels. I really enjoy a rewatch of Wizards of Waverley Place too. Its very silly but high comedy content for a Disney channel series. Feels weird to say love you Hank (because parasocial relationship and all that). But whatever it means to you I want to say youre the nerdy science dude Ive been watching for 10+ years and I appreciate that identity along with everything else you share. Whether you come back next week or 4 months from now - Ill be here. Well all be here for you. \nThe thread by john reached its quota, my recommendation: startsruck Oddysey\n\nCities Skylines for you Hank.\nFeels really strange to like this video but I appreciate you and want to tell you how much I feel for you in this situation and hope for the best for you\nBest wishes! Really hope you make a good, speedy recovery, this sort of thing can thankfully be helped so much better these days. Eat healthy, and try to be careful around others, dont want to catch something just after treatment when your immune system has been lowered...\nWish the best for you\nHank, you will be an absolute champion through this. We are here for you thru this, I know this is scary, but we are here to fully support you. You have got this hank.\nYOURE AMAZING HANK\nThat... ...sucks, man. (sigh) But y'know... ...you got this. ()\nSending tons of love. \nall my love and best wishes hank <3\nSome things that you probably already know because I'm pretty sure we have so many overlapping tastes: Drawfee, um actually, game changer, extra history, secret sleepover society (julia and jacob drawfee's extra channel)\nSending love to you and your family Hank.\nOmg you look like John green\nI also have a friend who went through it approx. 10 years ago. You're going to be okay. It's going to be very inconvenient but ultimately okay. Maybe start getting used to the idea that you might decide to take a break from social media, and possibly all work. Luckily, Vlog Brothers are a redundant system and we can get updates from the other one.\nI dont need there to be a big thing about it proceeds to make a 13 minute video about it \nI've heard a Seinfeld rewatch is fantastic during a stressful time. Also Friends. 90s sitcoms never fail to lift my mood! \nYou are so much more than \"struggling with anxiety cancer guy\". That is just one part of who you are in this moment. We imagine you complexly.\nBest of luck Hank!! You've got the whole world behind you!  Fight on! \nGod this is rough I can't imagine the stress you've been through We love you Hank As far as media, 3D Mario games are  and no stress I hear good things about stardew valley but don't know personally\nAlso a deeper cut, the story teller series by John Henson. Winding and whimsical fairytales\nVampire Survivors, The Witness, Darkest Dungeon, Divinity: Original Sin 2 are games you can play for a long time that I love and they also have never made me cry. Hilda is a lovely animated show. I apparently only read emotional books but maybe the Percy Jackson series could be fun.\nMay the Lord Jesus Christ be with you.\nsending all the positive vibes!! <3 much love from all of us!\nTime to grow a beard, shave your head and make blue meth man.\nHonestly you all are due for a nice long break. Youve worked hard for a very long time and this community is durable. Make stuff. Or dont. We do not mind at all. All you have done is bless me through almost my whole adult life so I do not ask anything from you at all.\nHey, I just had something similar happen. Getting my Thyroid butchered in a month.\nYou got this Hank. Were here for ya!"
+    }
+]
+
+Response:
+{
+    "id": "chatcmpl-7VUkqfzYCOVhJlCbtm6OOHfZZ87aN",
+    "object": "chat.completion",
+    "created": 1687740744,
+    "model": "gpt-3.5-turbo-0301",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "{\n  \"Video Games\": [\n    {\n      \"name\": \"Stardew Valley\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Cities Skylines\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Vampire Survivors\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"The Witness\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Darkest Dungeon\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Divinity: Original Sin 2\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"3D Mario games\",\n      \"count\": 1\n    }\n  ],\n  \"TV Shows\": [\n    {\n      \"name\": \"Parks and Recreation\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Wizards of Waverley Place\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Seinfeld\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Friends\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Hilda\",\n      \"count\": 1\n    }\n  ],\n  \"Books\": [\n    {\n      \"name\": \"Percy Jackson series\",\n      \"count\": 1\n    }\n  ],\n  \"YouTube Channels\": [\n    {\n      \"name\": \"Drawfee\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Um Actually\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Game Changer\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Extra History\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Secret Sleepover Society\",\n      \"count\": 1\n    }\n  ],\n  \"Movies\": [],\n}"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 997,
+        "completion_tokens": 405,
+        "total_tokens": 1402
+    }
+}

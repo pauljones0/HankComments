@@ -1,0 +1,34 @@
+Request:
+[
+    {
+        "role": "system",
+        "content": "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
+    },
+    {
+        "role": "user",
+        "content": "Cannot WAIT to see you kick cancer's ass. This is going to be nothing for THE Hank Green. I'll be scared for ya in the meantime, that way you won't need to be! Much love to y'all Greens!\nWishing you all the best from the bottom of my heart. Please concentrate on getting well, that's the most important job you have now. Every single nerdfighter is rooting for you and we all understand that you need time. My recommendation is Gargoyles, the 90s cartoon, it's amazing and fun and has no bummers expect that it had to end. And if you ever need an anything donor, drop me a line.\nI'm gonna need all you science youtubers to start taking better care of yourself. You've got cancer now, Physics girl is bed ridden from long covid since February. So help me god if Veritassium gets sick or hell even Backyard Scientist or William Osman I might lose it!! In all seriousness though I wish you the best Hank. Your content has always brought a smile to my face and an extra drop of knowledge to my brain and for that I'll always be grateful <3\nAt least you didn't get tuberculosis. John would lose his mind if you got tuberculosis. Cancer doesn't seem that bad compared to tuberculosis for John\nWishing you the best. Watching you and Katherine play super Mario bros helped get me through a difficult pregnancy 11 years ago, so I recommend most of the Mario franchise as being low to no bummer video games. Also Overcooked where the stakes are making food quickly and correctly. Best of luck.\nThe part about you struggling to accept the identity of someone with cancer, and how its hard to think about other people making that part of how they see you hit pretty hard. Ive never thought about it from that regard. Wishing you all the best Hank.\nMuch love, man. Hoping for the best of outcomes.\nHank will still be hank to me and everyone else,but that is one cool looking room\nRooting for you, much love\nSending love, support, and the following video game recommendations: Animal Crossing, Broken Age, Little Inferno, Monument Valley, Night In The Woods, Oxenfree, Return To Monkey Island, Stardew Valley, and Thimbleweed Park.\n I like a lot of animated stuff which may or may not be your jam. She-Ra, the new Frog and Toad, Steven Universe. I rewatch The Good Place frequently. And if you want something you can tune in and out of and like British media I do recommend Midsomer Murders, Father Brown, the Sister Boniface Mysteries, and basically everything in that genre on Britbox or Acorn TV. Midsomer Murders has 20+ seasons. \nLove you, Hank. I have been following almost all of your endeavours for more than 6 years and did not notice how unseemingly you got to be a part of my life even if you are thousands of miles away and we will probably never see each other in real life. I wish you all the best and hope you will beat this cancer very soon! Stay strong!\nHows a great time to get into dwarf fortress\nFight.\nHank, you are a wonderful person and will get through this!\nRemember when there was a vlogbrothers hiatus of sorts (maybe when children were born kinda paternity leave sort of thing) and numerous creators made vlogbrothers videos? That was fun! Anyways sending you strength and healing love. Take all the time you need and then take a bit more (I suspect you may not take enough time off, just a hunch), youve got this!\nEven when hes telling us heavy personal info, Hank still gives us a few fun tidbits about sciency stuff. How can you not appreciate this man\nIts weird that this is the first video Ive ever seen of yours. Wishing you all the luck in the world.\nCancer can't live with out Glutamine & Glucose. Thomas Seyfried head of micro biology Boston College.\nI wish you the fastest and easiest process. Take whatever time you need when you need it.\nyou worked so hard for science Hank! I think we can expect science to have your back now. Recommendation for a tv series, Shoresy and Letterkenny, it is light Canadian humor\nI wish you a complete healing and recovery from this."
+    }
+]
+
+Response:
+{
+    "id": "chatcmpl-7VTujZ7qTSF9rdGfcIt3PnzIGiWi1",
+    "object": "chat.completion",
+    "created": 1687737513,
+    "model": "gpt-3.5-turbo-0301",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "{\n  \"Video Games\": [\n    {\n      \"name\": \"Super Mario Bros\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Overcooked\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Animal Crossing\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Broken Age\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Little Inferno\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Monument Valley\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Night In The Woods\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Oxenfree\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Return To Monkey Island\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Stardew Valley\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Thimbleweed Park\",\n      \"count\": 1\n    }\n  ],\n  \"TV Shows\": [\n    {\n      \"name\": \"Gargoyles\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"She-Ra\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Frog and Toad\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Steven Universe\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"The Good Place\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Midsomer Murders\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Father Brown\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Sister Boniface Mysteries\",\n      \"count\": 1\n    }\n  ],\n  \"Books\": [],\n  \"YouTube Channels\": [],\n  \"Movies\": [],\n}"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1017,
+        "completion_tokens": 423,
+        "total_tokens": 1440
+    }
+}

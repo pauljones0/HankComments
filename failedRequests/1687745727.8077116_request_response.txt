@@ -1,0 +1,34 @@
+Request:
+[
+    {
+        "role": "system",
+        "content": "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
+    },
+    {
+        "role": "user",
+        "content": "Hank, I wanted to share that when I heard this news, I panicked. I was terrified that you would suffer and that you wouldn't be able to continue your good work and that you're probably going to be miserable for foreseeable future. I respect you immensely because you and your brother helped me out of a dark path. You taught me that learning is more fulfilling than the things I was into at the time. Thank you for everything you've done for my mind and my mental state and I will be wishing for your safe recovery every single day. I hope you have a speedy and painless treatment time and know that all of your fans love you immensely. Good luck and I love you\nGood vibes to you, Hank.\nI don't know if you have already found them, but Overly Sarcastic productions is great, entertaining, and easily digestible. I also think there have got to be a few good pelican documentaries out there. We love you! Please be kind to yourself. You got this!\nPlease take a break Hank. We don't expect weekly videos, or even any videos, from you for a long time. Is that a year? Maybe, less, maybe more. We will miss you, SO MUCH, but you gotta look after yourself. You will always be the science one to me \nholy poop, Hank, take care... Sending good vibes and cute hugs\nWe're here for you- I hope your recovery would be the easiest and the most helpful could be- sending love\nSorry so to hear your going through this. Stay positive.\nWishing you a speedy recovery, glad you're being well taken care of\nHank, stay strong. Take as much time as you need off too. We're all praying for you \nHi Hank, so sorry youre going through this.. were all here for you. Wishing you a speedy recovery!\nSo sorry you are going thru this Hank, but F**** cancer and youre gonna kick its sketchy behind!\nI've been following you for 10+ years and I rarely comment but my heart fell into my ass just now. Sending love from England.\ni just hope it gets better\nYouve got this, Hank  sending love and thoughts to you, Katherine, John & the whole family\nYou have a whole community supporting you, and I am sure you will win over this. But hey if you ever need a break we understand.\nI've got a biopsy on Monday for the same thing. I'm scared, but this made me a little less so. Thank you for being willing to share, and absolutely take all the time in the world. Sending you all the good thoughts Hank. \nClicked so dang fast. Im sorry brother  Thanks for telling us in such a sensitive way \nSending love and good wishes for you and your family. \nwishing you quick healing\nSending you so much love and support \nYoure gonna kick cancers ass!!!!!  were with you Hank \nYou gotta play Mario Odyssey\nIt's harsh... no doubt. Just keep up with your 'people' and take lots of pictures. (Good pictures of you doing stuff with your kids - not sick pics of the tumors... ) You can still be goofy science guy.\nYou'll get through this Hank. Lean on us, we've got you.\nYou'll always be the fun goofy science guy \nSending extra love to your family as well \nperfect time for hank to get into tears of the kingdom. theres even a pelican in it. but to be fair idk if the story gets hard im not far and im avoiding spoilers. so fair warning on that.\nYou got this Hank! Will be praying for you!\nHank, your friends are right. Fighting cancer is your job now. Like many jobs, some days will be okay, many days will be bad, few will actually be good. You will hate it, but it must be done for your friends, your family, but most importantly yourself. And like with many jobs, one day you'll realize you've managed to get a handle on it, and if you do your job well and/or you're lucky, one day you won't have to do it anymore, or at the very least have to do it once every six months or a year. One day at a time, one minute at a time. Admit weakness, but don't admit defeat. Sincerely, someone your videos helped through depression, and who has had to take care of family with cancer.\nMay Science Help You Buddy"
+    }
+]
+
+Response:
+{
+    "id": "chatcmpl-7VV79zA58C0sJTbBeRwIpDa2Vqqng",
+    "object": "chat.completion",
+    "created": 1687742127,
+    "model": "gpt-3.5-turbo-0301",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "{\n    \"Video Games\": [\n        {\n            \"name\": \"Mario Odyssey\",\n            \"count\": 1\n        }\n    ],\n    \"TV Shows\": [],\n    \"Books\": [],\n    \"YouTube Channels\": [\n        {\n            \"name\": \"Overly Sarcastic Productions\",\n            \"count\": 1\n        }\n    ],\n    \"Movies\": [],\n}"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1022,
+        "completion_tokens": 76,
+        "total_tokens": 1098
+    }
+}

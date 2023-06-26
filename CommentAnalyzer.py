@@ -16,10 +16,11 @@ from tenacity import (
 def should_retry(exception):
     """Return True if we should retry depending on the error"""
     if isinstance(exception, openai.error.APIError) or isinstance(exception, openai.error.Timeout) or isinstance(
-            exception, openai.error.RateLimitError) or isinstance(exception, openai.error.ServiceUnavailableError):
+            exception, openai.error.RateLimitError) or isinstance(exception,
+                                                                  openai.error.ServiceUnavailableError) or isinstance(
+        exception, openai.error.APIConnectionError):
         return True
     elif isinstance(exception, openai.error.AuthenticationError) \
-            or isinstance(exception, openai.error.APIConnectionError) \
             or isinstance(exception, openai.error.InvalidRequestError):
         return False
     return Exception
@@ -62,11 +63,48 @@ def parse_response(request, response):
     content = response['choices'][0]['message']['content']
     try:
         suggestions = json.loads(content)  # attempt to parse the JSON content
+        if not isinstance(suggestions, dict):  # check if the parsed content is a dictionary
+            print(f"Unexpected format in JSON response: {content}")
+            save_failed_request(request, response)
+            return None
+
+        # Check each suggestion for 'name' and 'count'
+        for category, suggestions_list in suggestions.items():
+            if not isinstance(suggestions_list, list):  # check if each suggestions_list is a list
+                print(f"Unexpected format in JSON response: {content}")
+                save_failed_request(request, response)
+                return None
+
+            for suggestion in suggestions_list:
+                if not isinstance(suggestion, dict) or 'name' not in suggestion or 'count' not in suggestion:
+                    print(f"Unexpected format in JSON response: {content}")
+                    save_failed_request(request, response)
+                    return None
+
     except json.JSONDecodeError:
         print(f"Failed to parse JSON response: {content}")
         save_failed_request(request, response)
-        suggestions = None
+        return None
+
     return suggestions
+
+
+def load_progress():
+    if os.path.exists("progress.json"):
+        with open("progress.json", 'r') as f:
+            return json.load(f)
+    else:
+        return {'Video Games': {}, 'TV Shows': {}, 'Books': {}, 'YouTube Channels': {},
+                'Movies': {}}  # initialize empty result dictionary
+
+
+def log_request_response(request, response):
+    with open("log.txt", 'a') as f:
+        f.write('Request:\n')
+        f.write(json.dumps(request, indent=4))
+        f.write('\n\nResponse:\n')
+        f.write(json.dumps(response, indent=4))
+        f.write('\n\n=================\n\n')
 
 
 class CommentAnalyzer:
@@ -76,8 +114,13 @@ class CommentAnalyzer:
         self.INPUT_FILE = "HankGreen.txt"
         self.OUTFILE = "HankGreen.json"
         self.MAX_CHARS_PER_BATCH = 4000
-        self.SYSTEM_PROMPT = "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
-        self.result_dict = {'Video Games': {}, 'TV Shows': {}, 'Books': {}, 'YouTube Channels': {}, 'Movies': {}}
+        self.SYSTEM_PROMPT = "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, " \
+                             "mass-produced media including video games, TV shows, books, YouTube channels, " \
+                             "and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', " \
+                             "'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and " \
+                             "'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize " \
+                             "token usage."
+        self.result_dict = load_progress()
 
     def process_comments(self, comments):
         comment_batch_char_count = 0
@@ -96,8 +139,10 @@ class CommentAnalyzer:
         prompt = generate_prompt(comment_batch)
         message = self.generate_message(prompt)
         response = self.generate_request(message)
+        log_request_response(message, response)
         suggestions = parse_response(message, response)
         self.update_result_dict(suggestions)
+        self.save_progress()  # Save progress after each batch
 
     def generate_message(self, prompt):
         return [
@@ -112,11 +157,30 @@ class CommentAnalyzer:
         ]
 
     def update_result_dict(self, suggestions):
+        print("Updating result dictionary...")
         if suggestions is None:
             return
 
-        for category, suggestions_dict in suggestions.items():
-            for name, count in suggestions_dict.items():
+        for category, suggestions_list in suggestions.items():
+            if not isinstance(suggestions_list, list):  # check if each suggestions_list is a list
+                print(f"Unexpected format in suggestions: {suggestions_list}")
+                continue
+
+            # Check if the category exists in the result dictionary, if not, create it
+            if category not in self.result_dict:
+                self.result_dict[category] = {}
+
+            for suggestion in suggestions_list:
+                if isinstance(suggestion, dict):  # If suggestion is an object with 'name' and 'count'
+                    name = suggestion.get('name')
+                    count = suggestion.get('count')
+                elif isinstance(suggestion, str):  # If suggestion is a string (directly the name)
+                    name = suggestion
+                    count = 1  # As there's no count in the second JSON structure, we assume it as 1
+                else:
+                    print(f"Unexpected format in suggestion: {suggestion}")
+                    continue
+
                 if name in self.result_dict[category]:
                     self.result_dict[category][name] += count
                 else:
@@ -133,6 +197,10 @@ class CommentAnalyzer:
 
     def store_results(self):
         with open(self.OUTFILE, 'w') as f:
+            json.dump(self.result_dict, f)
+
+    def save_progress(self):
+        with open("progress.json", 'w') as f:
             json.dump(self.result_dict, f)
 
     def run(self):

@@ -1,0 +1,34 @@
+Request:
+[
+    {
+        "role": "system",
+        "content": "Style: Multiple comments with media suggestions.\nCriteria: Real, well-known, mass-produced media including video games, TV shows, books, YouTube channels, and movies.\nOutput: A JSON object with lists of media suggestions in 'Video Games', 'TV Shows', 'Books', 'YouTube Channels', 'Movies'. Each suggestion includes 'name' and 'count'. Avoid double-counting. Correct all names and colloquialisms. Aim to minimize token usage."
+    },
+    {
+        "role": "user",
+        "content": "fun, stupid media i love: 1) umbrella academy. dont think about the plot holes, just listen to the music and vibe. 2) 80s music. just all of it. i especially enjoy the plethora of one-hit wonders with a single catchy song, does wonders on a depression day. 3) minecraft. no story, no dialogue, just blocks. i like to go into creative mode, and just pick random blocks with fun colors and try to build stuff. 4) the comedy of james acaster. he has a 4 part special on netflix, and ive rewatched it so many times. dude just has his silly made up stories about being an undercover detective or whatever and theyre great. 5) the 2013 film the secret life of walter mitty. fantastical tale about an ordinary guy. 6) gossip girl. the great gatsby of the 2000s. best watched throwing metaphorical popcorn at the screen. 7) avatar the last airbender. its silly and cute with surprisingly cool fightscenes. these are all from my very gen z brain, so maybe not the best for hank, but hey, who knows.\nAll the love from Turkey, we all wish you a swift recovery \nYou can be both fun goofy science guy and somebody struggling with anxiety cancer guy. Don't be too hard on yourself. Let the information sink in and deal with it in your own time. In any case, just want to stress out that you have fans all around the world (I myself am from Brazil) cheering for you. You've got this. Love and hugs.\nSending you so much love, support, and strength. I dealt with own battle of this sort last year and I hope yours will turn out the same. I found going back to the movies and TVs of my childhood helped uncover a new sense of self that I had forgotten and desperately needed then and now. \nHey bro, my mom got stage 4 colon cancer 2 years ago. She's been thriving. She did the crazy holistic therapies at some place in phoenix where they clean out your blood several times a week. She also takes rick simpson oil every day (heavy marijuana oil). She does Joe Dispenza meditations. She is still alive and kicking, going hiking, her cancer is not moving. She hasn't had to have chemo. I'm not saying this works for everyone but I'm saying it's at least keeping my mom alive. I really believe fighting cancer is partly a decision to wake up and change your life 100%. If you need any help hit me up.\nah its fine just walk it off and drink water\nNo better time to get cancer tho, heard about that new experimental that got 100% success rate.\nYouve got this Hank!!! Were all pulling for you  ETA: I just got a Nintendo switch (Im chronically ill and in bed a LOT) and Im LOVING Disney dreamlight valley, super chill game definitely worth a look.\nMy father's battle with cancer ended when I was 20. He had renal cancer that kept coming back and spreading. I am so glad that if you have to have cancer that you have one that's so treatable. I'm wishing the best for you and your entire family and everyone who's on your medical team. Take all the time you need. This fight is a full time job. We'll be here cheering you on.\nAcerola powder and fasting. The gene to produce vitamin C in humans is turned off, you don't get enough from food. Treatment for cancer before the Rockefeller foundation took over was intravenous vitamin C (LOADS of it). And it works. It supports your immune system which was the only thing keeping this from happening in the first place. What I suggested is one of the most vitamin C packed natural fruits in the world. No side effects. Also, take a very good look at your diet and what EMF sources you're around (phones, telephone poles, etc). They mutate cells. Eat organic, clean food. Mostly meat, then fruits and veggies. I don't know you, but I'm praying for you. Let me know if you have any questions. Take care of yourself. It's not over yet."
+    }
+]
+
+Response:
+{
+    "id": "chatcmpl-7VTXOXdkfA0ZWA6zL7ufSobJQtPF0",
+    "object": "chat.completion",
+    "created": 1687736066,
+    "model": "gpt-3.5-turbo-0301",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "{\n  \"Video Games\": [\n    {\n      \"name\": \"Minecraft\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Disney Dreamlight Valley\",\n      \"count\": 1\n    }\n  ],\n  \"TV Shows\": [\n    {\n      \"name\": \"Umbrella Academy\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Gossip Girl\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"Avatar: The Last Airbender\",\n      \"count\": 1\n    }\n  ],\n  \"Books\": [],\n  \"YouTube Channels\": [],\n  \"Movies\": [\n    {\n      \"name\": \"The Secret Life of Walter Mitty\",\n      \"count\": 1\n    }\n  ],\n}"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 981,
+        "completion_tokens": 165,
+        "total_tokens": 1146
+    }
+}

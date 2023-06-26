@@ -63,4 +63,5 @@ def main():
 if __name__ == "__main__":
     # TODO This python file currently doesn't connect up to the rest of the project. It's just a standalone script.
     #  In the future, update the rest of the project to connect to this file.
+    # TODO add Scalene to the project to profile the code
     main()

@@ -1,0 +1,18 @@
+# Core dependencies
+openai>=1.0.0
+python-dotenv>=1.0.0
+tenacity>=8.0.0
+
+# Data processing
+pandas>=1.5.0
+numpy>=1.20.0
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.12.0
+
+# Google API (for YouTube comment fetching)
+google-api-python-client>=2.0.0
+
+# Utility libraries
+requests>=2.28.0
